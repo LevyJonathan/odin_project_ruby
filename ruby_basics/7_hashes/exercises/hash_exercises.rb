@@ -2,14 +2,18 @@ def create_favorite_hash(color, number)
   # return a hash with the following key/value pairs:
   # key of color (as a symbol) with value of the color argument
   # key of number (as a symbol) with the value of the number argument
+  color_favorite = { color: color , number: number }
+  color_favorite
 end
 
 def favorite_color(favorite_list)
   # return the value of the color key
+  color_favorite[:color]
 end
 
 def favorite_number(favorite_list)
   # use #fetch to return the value of the number key or 42 if the key is not found
+  color_favorite.fetch(:number, 42)
 end
 
 def update_favorite_movie(favorite_list, movie)
